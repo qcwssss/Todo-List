@@ -130,7 +130,7 @@ app.post("/delete", function(req, res) {
   if (listName === "Today") {
     Item.findByIdAndRemove(checkedItemId, function(err) {
       if (!err) {
-        console.log("Remove item by id successfully");
+        // console.log("Remove item by id successfully");
         res.redirect("/");
       }
     });
@@ -139,7 +139,7 @@ app.post("/delete", function(req, res) {
       if (!err) {
         res.redirect("/" + listName);
       }
-    })
+    });
   }
 
 
