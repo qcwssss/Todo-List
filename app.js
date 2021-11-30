@@ -18,8 +18,8 @@ app.use(express.static("public"));
 
 // connect to mongoDB
 const mongo_key = process.env.MONGO_KEY;
-mongoose.connect("mongodb+srv://admin-chen:Test123@todolist.kiolx.mongodb.net/todolistDB");
-
+mongoose.connect("mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@todolist.kiolx.mongodb.net/todolistDB");
+// mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0-u6x7q.mongodb.net/todolistDB`, { useNewUrlParser: true, useUnifiedTopology: true });
 const itemsSchema = {
   name: String
 };
