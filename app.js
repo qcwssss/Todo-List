@@ -18,7 +18,7 @@ app.use(express.static("public"));
 
 // connect to mongoDB
 const mongoKey = process.env.MONGO_KEY;
-mongoose.connect("mongodb+srv://admin-chen:" + mongoKey + "@todolist.kiolx.mongodb.net/todolistDB");
+mongoose.connect("mongodb+srv://admin-chen:Test123@todolist.kiolx.mongodb.net/todolistDB");
 
 const itemsSchema = {
   name: String
